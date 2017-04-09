@@ -23,7 +23,7 @@ bot.dialog('/', function (session) {
     session.send('You said ' + session.message.text);
 });
 
-var instructions = `<b> <p>I am BEN, your AI support specialist. What can I help you with today?</p></b> <br> I can answer questions related to your policy,
+var instructions = `<b> <p>I am Debbie, your AI support specialist. What can I help you with today?</p></b> <br> I can answer questions related to your policy,
  help you make a payment, or assist with login. To make things easier you can also choose from the options below<br>
         <input type="button" onclick="hello(this)" value="PTO" id="PTO"><br>
         <input type="button" onclick="hello(this)" value="Baby" id="Baby"><br>
