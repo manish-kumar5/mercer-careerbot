@@ -19,9 +19,14 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 
 var bot = new builder.UniversalBot(connector);
 
-bot.dialog('/', function (session) {
-    session.send('You said ' + session.message.text);
-});
+
+const LuisModelUrl = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/465a87ca-94c2-484f-8404-3800443603ca?subscription-key=7f3caa5ead5c4b1aa323ec6ca520fa9f&verbose=true&timezoneOffset=5.5&spellCheck=true&q=';
+
+var recognizer = new builder.LuisRecognizer(LuisModelUrl);
+bot.recognizer(recognizer);
+
+bot.dialog('/', function (session) {builder.Prompts.text(session, "Sorry!! I didn't understand. Please try again.");});
+bot.dialog('pto_used', require('./dialogs/pto/pto_used')).triggerAction({ matches: 'pto_used' });
 
 var instructions = `<b> <p>I am Debbie, your AI support specialist. What can I help you with today?</p></b> <br> I can answer questions related to paid time offs,
  help you find answers around company benefits/ policies for pregnant employee and her Baby, or assist with your salary payment details/ schedules etc. To make things easier you can also choose from the options below<br>

@@ -7,7 +7,8 @@
     "botbuilder": "^3.7.0",
     "botbuilder-azure": "3.0.2",
     "dotenv-extended": "^1.0.4",
-    "restify": "^4.3.0"
+    "restify": "^4.3.0",
+    "string-template": "^1.0.0"
   },
   "devDependencies": {
     "restify": "^4.1.1"
