@@ -23,11 +23,11 @@ bot.dialog('/', function (session) {
     session.send('You said ' + session.message.text);
 });
 
-var instructions = `<b> <p>I am Debbie, your AI support specialist. What can I help you with today?</p></b> <br> I can answer questions related to your policy,
- help you make a payment, or assist with login. To make things easier you can also choose from the options below<br>
-        <input type="button" onclick="hello(this)" value="PTO" id="PTO"><br>
-        <input type="button" onclick="hello(this)" value="Baby" id="Baby"><br>
-        <input type="button" onclick="hello(this)" value="Pay" id="Pay">`;
+var instructions = `<b> <p>I am Debbie, your AI support specialist. What can I help you with today?</p></b> <br> I can answer questions related to paid time offs,
+ help you find answers around company benefits/ policies for pregnant employee and her Baby, or assist with your salary payment details/ schedules etc. To make things easier you can also choose from the options below<br>
+        <input type="button" onclick="hello(this)" value="Paid Time Offs" id="Paid Time Offs"><br>
+        <input type="button" onclick="hello(this)" value="Mother & Baby policies" id="Mother & Baby policies"><br>
+        <input type="button" onclick="hello(this)" value="Salary Queries" id="Salary Queries">`;
 
 bot.on('conversationUpdate', function (activity) {
     // when user joins conversation, send instructions
